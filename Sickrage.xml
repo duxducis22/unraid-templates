@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>duxducis-sickrage</Name>
+  <Description>Sickrage.
+</Description>
+  <Registry>https://registry.hub.docker.com/u/duxducis/sickrage/</Registry>
+  <Repository>duxducis/sickrage</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>Config directory on unRaid</HostDir>
+      <ContainerDir>/config</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <Banner>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/plex-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/plex-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
+helo
