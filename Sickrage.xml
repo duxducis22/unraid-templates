@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>duxducis-sickrage</Name>
+  <Name>Dux SickRage</Name>
   <Description>Sickrage.
 </Description>
   <Registry>https://registry.hub.docker.com/u/duxducis/sickrage/</Registry>
@@ -10,7 +10,13 @@
   <Environment/>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+     <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -19,8 +25,8 @@
     </Volume>
   </Data>
   <Version>44eceaa0</Version>
-  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
-  <Banner>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/plex-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/plex-icon.png</Icon>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <Banner>http://i.imgur.com/j2D2tgT.png</Banner>
+  <Icon>http://i.imgur.com/3WTuAz6.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
