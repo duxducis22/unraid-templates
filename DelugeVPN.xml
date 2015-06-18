@@ -1,0 +1,55 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Dux DelugeVPN++</Name>
+  <Description>Deluge + PIA Openvpn client with port forwarding + socks proxy.
+</Description>
+  <Registry>https://registry.hub.docker.com/u/duxducis/deluge/</Registry>
+  <Repository>duxducis/deluge</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>server</Name>
+      <Value>germany.privateinternetaccess.com</Value>
+    </Variable>
+    <Variable>
+      <Name>pia_user</Name>
+      <Value>Your PIA Username</Value>
+    </Variable>
+    <Variable>
+      <Name>pia_pass</Name>
+      <Value>Your PIA Password</Value>
+    </Variable>
+  </Environment> 
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>8112</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1080</HostPort>
+        <ContainerPort>1080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>Config directory on unRaid</HostDir>
+      <ContainerDir>/config</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Download roots directory on unRaid</HostDir>
+      <ContainerDir>/roots</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <Banner>http://i.imgur.com/j2D2tgT.png</Banner>
+  <Icon>http://i.imgur.com/3WTuAz6.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --device /dev/net/tun --dns 8.8.8.8 --dns 8.8.4.4</ExtraParams>
+</Container>
