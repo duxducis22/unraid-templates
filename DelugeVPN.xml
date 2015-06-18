@@ -17,7 +17,7 @@
       <Value>Your PIA Username</Value>
     </Variable>
     <Variable>
-      <Name>pia_pass</Name>
+      <Name>pia_password</Name>
       <Value>Your PIA Password</Value>
     </Variable>
   </Environment> 
