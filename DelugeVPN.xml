@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>Dux DelugeVPN++</Name>
+  <Name>Dux DelugeVPN Plus</Name>
   <Description>Deluge + PIA Openvpn client with port forwarding + socks proxy.
 </Description>
   <Registry>https://registry.hub.docker.com/u/duxducis/deluge/</Registry>
