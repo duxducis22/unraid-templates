@@ -26,7 +26,7 @@
   </Data>
   <Version>44eceaa0</Version>
   <WebUI>http://[IP]:[PORT:8081]/</WebUI>
-  <Banner>http://i.imgur.com/j2D2tgT.png</Banner>
-  <Icon>http://i.imgur.com/3WTuAz6.png</Icon>
+  <Banner>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sickrage-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sickrage-icon.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
