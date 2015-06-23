@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Dux MongoDB</Name>
+  <Description>MongoDB with scheduled backup.
+</Description>
+  <Registry>https://registry.hub.docker.com/u/duxducis/mongo/</Registry>
+  <Repository>duxducis/mongo</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>backup_cron</Name>
+      <Value>0 0 * * *</Value>
+    </Variable>
+  </Environment> 
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>27017</HostPort>
+        <ContainerPort>27017</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>MongoDB Storage Directory on UnRAID</HostDir>
+      <ContainerDir>/data/db</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
+  <Banner>https://www.mongodb.org/static/images/mongodb-logo-large.png</Banner>
+  <Icon>http://www.ossys.com/wp-content/uploads/2014/01/mongodb_slide.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
