@@ -13,17 +13,17 @@
      <Publish>
       <Port>
         <HostPort>50015</HostPort>
-        <ContainerPort>20015</ContainerPort>
+        <ContainerPort>50015</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
         <HostPort>50016</HostPort>
-        <ContainerPort>20016</ContainerPort>
+        <ContainerPort>50016</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
         <HostPort>50017</HostPort>
-        <ContainerPort>20017</ContainerPort>
+        <ContainerPort>50017</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
