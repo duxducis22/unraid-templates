@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Pava Server</Name>
+  <Description>Server component of Pava.
+</Description>
+  <Registry>https://registry.hub.docker.com/u/duxducis/pava_server/</Registry>
+  <Repository>duxducis/pava_server</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>50015</HostPort>
+        <ContainerPort>20015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>50016</HostPort>
+        <ContainerPort>20016</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>50017</HostPort>
+        <ContainerPort>20017</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>Pava photo directory on UnRAID</HostDir>
+      <ContainerDir>/photos</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Pava video directory on UnRAID</HostDir>
+      <ContainerDir>/videos</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Google Drive directory on UnRAID</HostDir>
+      <ContainerDir>/gdrive</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Final photo directory on UnRAID</HostDir>
+      <ContainerDir>/final_photos</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Final video directory on UnRAID</HostDir>
+      <ContainerDir>/final_videos</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <Banner>https://openclipart.org/image/300px/svg_to_png/8099/leftover-bacon-Camera-Lens.png</Banner>
+  <Icon>https://openclipart.org/image/300px/svg_to_png/8099/leftover-bacon-Camera-Lens.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
