@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>Hub</Name>
-  <Description>Home Hub
+  <Name>Docker Node.js</Name>
+  <Description>Docker Node.js
 </Description>
   <Registry>https://hub.docker.com/r/duxducis/docker-nodejs/</Registry>
   <Repository>duxducis/docker-nodejs</Repository>
@@ -12,7 +12,7 @@
     <Mode>bridge</Mode>
      <Publish>
       <Port>
-        <HostPort>59678</HostPort>
+        <HostPort>5000</HostPort>
         <ContainerPort>5000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
