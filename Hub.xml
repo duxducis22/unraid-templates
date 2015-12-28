@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Hub</Name>
+  <Description>Home Hub
+</Description>
+  <Registry>https://hub.docker.com/r/duxducis/docker-nodejs/</Registry>
+  <Repository>duxducis/docker-nodejs</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>59678</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>Configuration directory on UnRAID</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <Banner>https://nodejs.org/static/images/logo.svg</Banner>
+  <Icon>http://tecadmin.net/wp-content/uploads/2014/05/nodejs-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
