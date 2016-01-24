@@ -11,7 +11,7 @@
     <Mode>bridge</Mode>
      <Publish>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort>9000</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -32,7 +32,7 @@
     </Volume>
     <Volume>
       <HostDir>Completed videos directory on unRaid</HostDir>
-      <ContainerDir>/videos</ContainerDir>
+      <ContainerDir>/completed_videos</ContainerDir>
     </Volume>
   </Data>
   <Version>44eceaa0</Version>
