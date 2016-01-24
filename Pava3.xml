@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Docker Pava3 Server</Name>
+  <Description>Docker Pava3 Server</Description>
+  <Registry>https://hub.docker.com/r/duxducis/pava3/</Registry>
+  <Repository>duxducis/pava3</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>Photos directory on unRaid</HostDir>
+      <ContainerDir>/photos</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Videos directory on unRaid</HostDir>
+      <ContainerDir>/videos</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Completed photos directory on unRaid</HostDir>
+      <ContainerDir>/completed_photos</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Completed videos directory on unRaid</HostDir>
+      <ContainerDir>/videos</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <Banner>https://nodejs.org/static/images/logo.svg</Banner>
+  <Icon>http://tecadmin.net/wp-content/uploads/2014/05/nodejs-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
