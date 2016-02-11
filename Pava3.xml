@@ -34,6 +34,10 @@
       <HostDir>Completed videos directory on unRaid</HostDir>
       <ContainerDir>/completed_videos</ContainerDir>
     </Volume>
+    <Volume>
+      <HostDir>GDrive irectory on unRaid</HostDir>
+      <ContainerDir>/gdrive</ContainerDir>
+    </Volume>
   </Data>
   <Version>44eceaa0</Version>
   <Banner>https://nodejs.org/static/images/logo.svg</Banner>

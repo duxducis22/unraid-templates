@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>SickPotato</Name>
+  <Description>SickPotato</Description>
+  <Registry>https://registry.hub.docker.com/u/duxducis/sickpotato/</Registry>
+  <Repository>duxducis/sickpotato</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>SickRage config directory on unRaid</HostDir>
+      <ContainerDir>/config/sickrage</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>CouchPotato config directory on unRaid</HostDir>
+      <ContainerDir>/config/couchpotato</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>TV Shows directory on unRaid</HostDir>
+      <ContainerDir>/tvshows</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Movies directory on unRaid</HostDir>
+      <ContainerDir>/movies</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Kids TV Shows directory on unRaid</HostDir>
+      <ContainerDir>/kids/tvshows</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>Kids Movies directory on unRaid</HostDir>
+      <ContainerDir>/kids/movies</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>SickRage blackhole directory on unRaid</HostDir>
+      <ContainerDir>/blackhole/sickrage</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>CouchPotato blackhole directory on unRaid</HostDir>
+      <ContainerDir>/blackhole/couchpotato</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>SickRage complete directory on unRaid</HostDir>
+      <ContainerDir>/complete/sickrage</ContainerDir>
+    </Volume>
+    <Volume>
+      <HostDir>CouchPotato complete directory on unRaid</HostDir>
+      <ContainerDir>/complete/couchpotato</ContainerDir>
+    </Volume>
+  </Data>
+  <Version>44eceaa0</Version>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <Banner>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sickrage-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sickrage-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
