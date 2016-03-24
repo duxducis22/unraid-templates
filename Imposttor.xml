@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+    <Name>Imposttor</Name>
+    <Description>Immediate Post Torrent. Securely downloads and postprocesses torrents from a seedbox.</Description>
+    <Registry>https://registry.hub.docker.com/u/duxducis/imposttor/</Registry>
+    <Repository>duxducis/imposttor</Repository>
+    <BindTime>true</BindTime>
+    <Privileged>false</Privileged>
+    <Environment>
+        <Variable>
+            <Name>server</Name>
+            <Value>nl.privateinternetaccess.com</Value>
+        </Variable>
+        <Variable>
+            <Name>pia_user</Name>
+            <Value>Your PIA Username</Value>
+        </Variable>
+        <Variable>
+            <Name>pia_password</Name>
+            <Value>Your PIA Password</Value>
+        </Variable>
+        <Variable>
+            <Name>seedbox_host</Name>
+            <Value>IP or DNS name of seedbox</Value>
+        </Variable>
+        <Variable>
+            <Name>seedbox_user</Name>
+            <Value>Your seedbox user name</Value>
+        </Variable>
+        <Variable>
+            <Name>seedbox_key</Name>
+            <Value>/root/.ssh/id_rsa</Value>
+        </Variable>
+        <Variable>
+            <Name>data_dir</Name>
+            <Value>/data</Value>
+        </Variable>
+    </Environment> 
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>1080</HostPort>
+                <ContainerPort>1080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>1081</HostPort>
+                <ContainerPort>1081</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>5000</HostPort>
+                <ContainerPort>5000</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>SSH Key for seedbox</HostDir>
+            <ContainerDir>/root/.ssh/id_rsa</ContainerDir>
+        </Volume>
+        <Volume>
+            <HostDir>Download directory on unRaid</HostDir>
+            <ContainerDir>/data</ContainerDir>
+        </Volume>
+    </Data>
+    <Version>44eceaa0</Version>
+    <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+    <Banner>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/deluge-banner.png</Banner>
+    <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/deluge-icon.png</Icon>
+    <ExtraParams>--cap-add=NET_ADMIN --device /dev/net/tun --dns 8.8.8.8 --dns 8.8.4.4</ExtraParams>
+</Container>

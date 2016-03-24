@@ -7,6 +7,15 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
+    <Variable>
+      <Name>socks_proxy_server</Name>
+      <Value>Socks Proxy Server</Value>
+    </Variable>
+    <Variable>
+      <Name>socks_proxy_port</Name>
+      <Value>1080</Value>
+    </Variable>
+  </Environment> 
   <Networking>
     <Mode>bridge</Mode>
      <Publish>
